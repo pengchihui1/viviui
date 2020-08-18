@@ -54,9 +54,6 @@ const Table = ({ dtype, children, ...props }) => {
               .borderStyle tr:nth-child(odd) td{
                 background-color:#f9f9f9 ;
               }
-              .borderStyle tr:first-child{
-               background-color:#EEE0E5;//第一个
-             }
             
             `}
           </style>
@@ -73,29 +70,24 @@ const Table = ({ dtype, children, ...props }) => {
           {...props}
         >
           {children}
-          <style>
+          <style jsx global>
             {`
-               .trShadow tr{ //条纹
-                box-shadow: '0 6px 20px 0 rgba(0,0,0,0.19)';
-              }   
               .trShadow tr{ 
-                border-bottom: 1px solid #ddd;  //黑直线
+                border-bottom: 1px solid #ddd; 
               }
-              .trShadow tr:nth-last-child(1){ 
-               border-bottom:none; //最后一个 
+              .trShadow thead tr:first-of-type{ 
+               border-bottom:none;
               }
               .trShadow  tr:nth-child(1) td{
-                background-color:none; //隔行换色
+                background-color:none; 
               }
-              .trShadow  tr:nth-child(even) td{
+              .trShadow tr:nth-child(even) td{
                 background-color:#dff0d8;
               }
-              .trShadow  tr:nth-child(odd) td{
-                background-color:#f9f9f9 ;
+              .trShadow tbody tr:hover, tr:hover{
+                box-shadow: 0 5px 20px 0 rgba(0,0,0,0.5) inset;
+                cursor:auto;
               }
-              .trShadow tr:first-child{
-               background-color:#EEE0E5;//第一个
-             }
 
               `}
           </style>
@@ -115,27 +107,23 @@ const Table = ({ dtype, children, ...props }) => {
           {children}
           <style>
             {`
-              .trHover tr td:hover,.trHover tr th:hover{ 
-                  cursor:auto; //鼠标经过
-              }
+            
               .trHover tr{
-                border-bottom: 1px solid #ddd;  //黑直线
+                border-top: 1px solid #ddd;  
               }
-              .trHover tr:nth-last-child(1){ 
-                border-bottom:none; //最后一个 
+              .trHover thead tr:first-of-type{ 
+                border-top:none; 
                }
-              .trHover tr:nth-child(1) td{
-                background-color:none; //隔行换色
-              }
-              .trHover tr:nth-child(even) td{
+              .trHover tr:nth-child(even) {
                 background-color:#dff0d8;
               }
-              .trHover tr:nth-child(odd) td{
-                background-color:#f9f9f9 ;
+              .trHover tr:nth-child(odd) {
+                background-color:f9f9f9 ;
               }
-              .trHover tr:first-child{
-               background-color:#EEE0E5;//第一个
-             }
+              .trHover tr:hover,.trHover tr:hover{
+                background-color: #f5f5f5;
+                cursor:auto;
+              }
               `}
           </style>
         </Box>
@@ -157,10 +145,14 @@ const Table = ({ dtype, children, ...props }) => {
             <style>
               {`
                .trLeight tr{
-                line-height:30px;//紧凑
+                border-top: 1px solid #ddd;
+                line-height:30px;
+               }
+               .trLeight thead tr:first-of-type{ 
+                border-top: none;
                }
                .trLeight tr:nth-child(1) td{
-                background-color:none; //隔行换色
+                background-color:none; 
               }
               .trLeight tr:nth-child(even) td{
                 background-color:#dff0d8;
@@ -168,9 +160,6 @@ const Table = ({ dtype, children, ...props }) => {
               .trLeight tr:nth-child(odd) td{
                 background-color:#f9f9f9 ;
               }
-              .trLeight tr:first-child{
-               background-color:#EEE0E5;//第一个
-             }
               
               `}
             </style>
@@ -193,20 +182,18 @@ const Table = ({ dtype, children, ...props }) => {
             <style>
               {`
                .trLeight tr{
-                line-height:50px;//紧凑
+                border-top: 1px solid #ddd;
+                line-height:50px;
                }
-               .trLeight tr:nth-child(1) td{
-                background-color:none; //隔行换色
-              }
+               .trLeight thead tr:first-of-type{ 
+                border-top: none;
+               }
               .trLeight tr:nth-child(even) td{
                 background-color:#dff0d8;
               }
               .trLeight tr:nth-child(odd) td{
                 background-color:#f9f9f9 ;
               }
-              .trLeight tr:first-child{
-               background-color:#EEE0E5;//第一个
-             }
               `}
             </style>
           </Box>
