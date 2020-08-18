@@ -12,6 +12,7 @@ export const SearchTest = () => {
   return (
     <Container mt='30px'>
       <Search
+
         left={<SearchBox placeholder='活动名称、特长' />}
         right={<SearchButton onClick={action('button-click')}>搜索</SearchButton>}
       >
