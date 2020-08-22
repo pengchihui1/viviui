@@ -5,39 +5,40 @@ import {
 } from '@chakra-ui/core'
 
 import PostGroup from '../src/components/postGroup'
-import PostCreatorHeader from '../src/components/postGroup/postCreatorHeader'
+import PostHeader from '../src/components/postGroup/postHeader'
 import PostMenu from '../src/components/postGroup/postMenu'
 import PostTalent from '../src/components/postGroup/postTalent'
 import PostTags from '../src/components/postGroup/postTags'
 import PostTagsItem from '../src/components/postGroup/postTagsItem'
 import PostTitle from '../src/components/postGroup/postTitle'
 import PostContent from '../src/components/postGroup/postContent'
-import PhotosGrid from '../src/components/postGroup/photosGrid'
+import OldPictureGroup from '../src/components/oldPictureGroup'
 
 export default {
   title: 'PostGroup(hui)'
 }
 
-export const postHeader = () => {
-  const data = [
-    'https://f10.baidu.com/it/u=1911995130,2805437140&fm=76',
-    'https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1597813527236&di=a5494e7acd2a67875a6a6f40853d87ed&imgtype=0&src=http%3A%2F%2Fn1-q.mafengwo.net%2Fs11%2FM00%2F2F%2F8F%2FwKgBEFq1tuyAWL_MAHFIKtUcCPo65.jpeg',
-    'https://ss0.bdstatic.com/70cFuHSh_Q1YnxGkpoWK1HF6hhy/it/u=1873101598,2655143176&fm=26&gp=0.jpg',
-    'https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1597813641438&di=dba0f784301c7df3daf4f313a8635de8&imgtype=0&src=http%3A%2F%2Fimg3.imgtn.bdimg.com%2Fit%2Fu%3D3014066488%2C1993301398%26fm%3D214%26gp%3D0.jpg'
-    // 'https://t11.baidu.com/it/u=30595192,1654543529&fm=76',
-    // 'https://ss0.bdstatic.com/70cFuHSh_Q1YnxGkpoWK1HF6hhy/it/u=2494239978,1960683224&fm=15&gp=0.jpg',
-    // 'https://ss0.bdstatic.com/70cFuHSh_Q1YnxGkpoWK1HF6hhy/it/u=2494239978,1960683224&fm=15&gp=0.jpg'
-  ]
+const pictures = [
+  { type: 'image/jpg', url: 'https://dss0.bdstatic.com/70cFuHSh_Q1YnxGkpoWK1HF6hhy/it/u=3988286801,48626279&fm=26&gp=0.jpg', id: 1 },
+  { type: 'image/jpg', url: 'https://dss0.bdstatic.com/70cFuHSh_Q1YnxGkpoWK1HF6hhy/it/u=1947839005,1811220579&fm=26&gp=0.jpg', id: 2 },
+  { type: 'image/jpg', url: 'https://ss2.bdstatic.com/70cFvnSh_Q1YnxGkpoWK1HF6hhy/it/u=3383916863,1183745965&fm=26&gp=0.jpg', id: 3 },
+  { type: 'image/jpg', url: 'https://ss2.bdstatic.com/70cFvnSh_Q1YnxGkpoWK1HF6hhy/it/u=3383916863,1183745965&fm=26&gp=0.jpg', id: 4 },
+  { type: 'image/png', url: 'https://ss1.bdstatic.com/70cFuXSh_Q1YnxGkpoWK1HF6hhy/it/u=2407081651,3186896498&fm=26&gp=0.jpg', id: 5 },
+  { type: 'image/png', url: 'https://ss0.bdstatic.com/70cFvHSh_Q1YnxGkpoWK1HF6hhy/it/u=325461855,3402280707&fm=26&gp=0.jpg', id: 6 },
+  { type: 'image/png', url: 'https://vdposter.bdstatic.com/78e9d4347ddc538256c6eb3bced8e12b.jpeg?x-bce-process=image/resize,m_fill,w_242,h_182/format,f_jpg/quality,Q_100', id: 7 }
+]
+export const PostAll = () => {
+  const show = pictures
   const lablesList = ['李海', '李逵', '张秀']
   return (
     <Box mt='20px'>
       <PostGroup
         m='0 auto' width={{ base: '100%', sm: '100%', md: '500px' }}
         topLeft={
-          <PostCreatorHeader
+          <PostHeader
             link='https://www.baidu.com/'
             name='pengchihui2'
-            // photo='https://ss0.bdstatic.com/70cFuHSh_Q1YnxGkpoWK1HF6hhy/it/u=1873101598,2655143176&fm=26&gp=0.jpg'
+            photo='https://f10.baidu.com/it/u=1911995130,2805437140&fm=76'
             time=' 2020-08-20 10:32:55'
           />
         }
@@ -53,7 +54,88 @@ export const postHeader = () => {
         }
         postTitle={<PostTitle>夏威夷 夏令营</PostTitle>}
         postContent={<PostContent>夏威夷地处太平洋,四面环海,气候宜人,环境优美,有“旅游天堂”之美誉。阳光,海洋,沙滩,火山,还有当地的民俗文化,构成了极富特色的夏威夷风光。</PostContent>}
-        photosGrid={<PhotosGrid photos={data} />}
+        photosGroup={<OldPictureGroup photos={show} />}
+      />
+    </Box>
+  )
+}
+
+export const TopLeft = () => {
+  return (
+    <Box mt='20px' m='0 auto' width={{ base: '100%', sm: '100%', md: '500px' }}>
+      <PostGroup
+        topLeft={
+          <PostHeader
+            link='https://www.baidu.com/'
+            name='pengchihui2'
+            photo='https://f10.baidu.com/it/u=1911995130,2805437140&fm=76'
+            time=' 2020-08-20 10:32:55'
+          />
+        }
+      />
+    </Box>
+  )
+}
+
+export const TopLR = () => {
+  return (
+    <Box mt='20px' m='0 auto' width={{ base: '100%', sm: '100%', md: '500px' }}>
+      <PostGroup
+        topLeft={
+          <PostHeader
+            link='https://www.baidu.com/'
+            name='pengchihui2'
+            photo='https://f10.baidu.com/it/u=1911995130,2805437140&fm=76'
+            time=' 2020-08-20 10:32:55'
+          />
+        }
+        topRight={<PostMenu color='#EE0000' />}
+      />
+    </Box>
+  )
+}
+export const postTalent = () => {
+  return (
+    <Box mt='20px' m='0 auto' width={{ base: '100%', sm: '100%', md: '500px' }}>
+      <PostGroup
+        postTalent={<PostTalent>充满爱心、追求时髦、一朵花</PostTalent>}
+      />
+    </Box>
+  )
+}
+export const postTags = () => {
+  return (
+    <Box mt='20px' m='0 auto' width={{ base: '100%', sm: '100%', md: '500px' }}>
+      <PostGroup
+        postTags={
+          <PostTags color='#7EC0EE'>
+            <PostTagsItem link='https://www.baidu.com/'>小薇</PostTagsItem>
+            <PostTagsItem link='https://www.baidu.com/'>紫霞</PostTagsItem>
+            <PostTagsItem link='https://www.baidu.com/'>小鬼</PostTagsItem>
+            <PostTagsItem link='https://www.baidu.com/'>小西</PostTagsItem>
+          </PostTags>
+        }
+      />
+    </Box>
+  )
+}
+export const postContent = () => {
+  return (
+    <Box mt='20px' m='0 auto' width={{ base: '100%', sm: '100%', md: '500px' }}>
+      <PostGroup
+        postTitle={<PostTitle color='#7A67EE'>夏威夷 夏令营</PostTitle>}
+        postContent={<PostContent color='#E066FF'>夏威夷地处太平洋,四面环海,气候宜人,环境优美,有“旅游天堂”之美誉。阳光,海洋,沙滩,火山,还有当地的民俗文化,构成了极富特色的夏威夷风光。</PostContent>}
+      />
+    </Box>
+  )
+}
+
+export const photosTwo = () => {
+  const show = pictures.slice(0, 2)
+  return (
+    <Box mt='20px' m='0 auto' width={{ base: '100%', sm: '100%', md: '500px' }}>
+      <PostGroup
+        photosGroup={<OldPictureGroup photos={show} />}
       />
     </Box>
   )

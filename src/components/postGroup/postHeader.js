@@ -8,9 +8,9 @@ import {
 } from '@chakra-ui/core'
 import NextLink from 'next/link'
 
-const PostCreatorHeader = ({ link, name, photo, time, children, ...props }) => {
+const PostHeader = ({ link, name, photo, time, children, ...props }) => {
   return (
-    <Stack isInline>
+    <Stack isInline {...props}>
       {/* 發文者的頭像 姓名 發文時間 */}
 
       <Box
@@ -43,7 +43,6 @@ const PostCreatorHeader = ({ link, name, photo, time, children, ...props }) => {
           .photo img{
             max-width: 100%;
             height: 100%;
-            
           }
           `}
         </style>
@@ -67,4 +66,4 @@ const PostCreatorHeader = ({ link, name, photo, time, children, ...props }) => {
   )
 }
 
-export default PostCreatorHeader
+export default PostHeader
