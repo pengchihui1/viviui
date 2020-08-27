@@ -10,7 +10,7 @@ module.exports = {
     '../stories/**/modalSelector.[tj]s',
     '../stories/**/search.[tj]s',
     '../stories/**/cardDeck.[tj]s',
-    '../stories/**/management.[tj]s',
+    '../stories/**/page.[tj]s',
     '../stories/**/wbgLayout.[tj]s',
     '../stories/**/adminBatchAdd.[tj]s',
     '../stories/**/avatarTootip.[tj]s',
