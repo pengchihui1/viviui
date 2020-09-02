@@ -10,5 +10,4 @@ const PageBody = (props) => {
     </Box>
   )
 }
-
 export default PageBody

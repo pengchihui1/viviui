@@ -10,5 +10,4 @@ const PageHeader = (props) => {
     </Box>
   )
 }
-
 export default PageHeader

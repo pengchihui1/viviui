@@ -11,8 +11,6 @@ const Page = ({ title, nodivider = false, children, ...props }) => {
   let pageHeader = null
   let pageBody = null
   let pageFooter = null
-  const chil = []
-
   Children.map(children, (c, i) => {
     switch (c.type) {
       case PageTitle:
@@ -29,18 +27,15 @@ const Page = ({ title, nodivider = false, children, ...props }) => {
         pageFooter = c
         break
       default:
-        chil.push(c)// 頭部以外的 children
+        break
     }
   })
-
   return (
     <WbgPage title={title} pageTitle={pageTitles} nodivider={nodivider} {...props}>
       {pageHeader}
       {pageBody}
       {pageFooter}
-      {chil}
     </WbgPage>
   )
 }
-
 export default Page

@@ -70,9 +70,9 @@ export const ManagementTest = () => {
 export const Pages = () => {
   return (
     <Page>
-      <PageHeader>123</PageHeader>
-      <PageBody>456</PageBody>
-      <PageFooter>789</PageFooter>
+      <PageHeader>头部</PageHeader>
+      <PageBody>中部</PageBody>
+      <PageFooter>底部</PageFooter>
     </Page>
   )
 }
