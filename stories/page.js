@@ -14,11 +14,15 @@ import { action } from '@storybook/addon-actions'
 
 import Management from '../src/components/page/manageMent'
 import ColumnLine from '../src/components/page/columnIconText'
+
 import Page from '../src/components/page'
 import PageTitle from '../src/components/page/pageTitle'
+import PageHeader from '../src/components/page/pageHeader'
+import PageBody from '../src/components/page/pageBody'
+import PageFooter from '../src/components/page/pageFooter'
 
 export default {
-  title: 'Management(hui)'
+  title: 'Page(hui vivi)'
 }
 
 export const ManagementTest = () => {
@@ -59,6 +63,16 @@ export const ManagementTest = () => {
           }
         </List>
       </Management>
+    </Page>
+  )
+}
+
+export const Pages = () => {
+  return (
+    <Page>
+      <PageHeader>123</PageHeader>
+      <PageBody>456</PageBody>
+      <PageFooter>789</PageFooter>
     </Page>
   )
 }

@@ -1,13 +1,13 @@
 import React from 'react'
 import {
-  Button
+  Box
 } from '@chakra-ui/core'
 
 const PageBody = (props) => {
   return (
-    <>
+    <Box>
       {props.children}
-    </>
+    </Box>
   )
 }
 
