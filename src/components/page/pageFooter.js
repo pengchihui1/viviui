@@ -3,7 +3,7 @@ import {
   Button
 } from '@chakra-ui/core'
 
-const PageHeader = (props) => {
+const PageFooter = (props) => {
   return (
     <>
       {props.children}
@@ -11,4 +11,4 @@ const PageHeader = (props) => {
   )
 }
 
-export default PageHeader
+export default PageFooter
