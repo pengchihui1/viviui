@@ -5,7 +5,7 @@ import {
 
 const PageHeader = (props) => {
   return (
-    <Box>
+    <Box {...props}>
       {props.children}
     </Box>
   )

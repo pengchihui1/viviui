@@ -5,7 +5,7 @@ import {
 
 const PageFooter = (props) => {
   return (
-    <Box>
+    <Box {...props}>
       {props.children}
     </Box>
   )

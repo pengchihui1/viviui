@@ -70,9 +70,9 @@ export const ManagementTest = () => {
 export const Pages = () => {
   return (
     <Page>
-      <PageHeader>头部</PageHeader>
-      <PageBody>中部</PageBody>
-      <PageFooter>底部</PageFooter>
+      <PageHeader color='#FF00FF'>头部</PageHeader>
+      <PageBody color='#FF00FF'>中部</PageBody>
+      <PageFooter color='#FF00FF'>底部</PageFooter>
     </Page>
   )
 }
