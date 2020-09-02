@@ -2,7 +2,9 @@ import React from 'react'
 import {
   List,
   ListItem,
-  Link
+  Link,
+  Heading,
+  Box
 } from '@chakra-ui/core'
 import { FaSchool, FaUserEdit } from 'react-icons/fa'
 import { AiTwotoneSetting } from 'react-icons/ai'
@@ -13,7 +15,7 @@ import { action } from '@storybook/addon-actions'
 import Management from '../src/components/page/manageMent'
 import ColumnLine from '../src/components/page/columnIconText'
 import Page from '../src/components/page'
-import HeaderPage from '../src/components/page/pageHeader'
+import PageTitle from '../src/components/page/pageTitle'
 
 export default {
   title: 'Management(hui)'
@@ -30,9 +32,9 @@ export const ManagementTest = () => {
   return (
     <Page
       title={
-        <HeaderPage>
+        <PageTitle>
           管理员
-        </HeaderPage>
+        </PageTitle>
       }
     >
       <Management

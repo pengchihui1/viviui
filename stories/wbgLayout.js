@@ -12,7 +12,7 @@ import { action } from '@storybook/addon-actions'
 import { Formik, Form, Field } from 'formik'
 
 import Page from '../src/components/page'
-import HeaderPage from '../src/components/page/pageHeader'
+import PageTitle from '../src/components/page/pageTitle'
 import BackButton from '../src/components/page/backButton'
 import SureButton from '../src/components/page/sureButton'
 import DeleteRemind from '../src/components/page/deleteRemind'
@@ -29,7 +29,7 @@ export default {
 export const headering = () => {
   return (
     <Page>
-      <HeaderPage>這是HeaderPage component</HeaderPage>
+      <PageTitle>這是PageTitle component</PageTitle>
     </Page>
   )
 }
@@ -45,13 +45,13 @@ export const editDashboard = () => {
   }
   return (
     <Page>
-      <HeaderPage size='lg' as='h2' pt={4}>編輯</HeaderPage>
-      <HeaderPage
+      <PageTitle size='lg' as='h2' pt={4}>編輯</PageTitle>
+      <PageTitle
         fontSize={{ base: '17px', md: '25px' }}
         mt={5}
       >
         这也是一个Header
-      </HeaderPage>
+      </PageTitle>
       <Box px={{ base: 8, sm: 8, md: 16 }} py={4}>
         <Box
           // display={{ base: 'block', sm: 'block', md: 'flex' }}
@@ -126,8 +126,8 @@ export const editCls = () => {
     <Page
       title={
         <>
-          <HeaderPage size='lg' as='h2' pt={4}>編輯 Dashboard</HeaderPage>
-          <HeaderPage
+          <PageTitle size='lg' as='h2' pt={4}>編輯 Dashboard</PageTitle>
+          <PageTitle
             fontSize={{ base: '17px', md: '25px' }}
             mt={5}
           >
@@ -138,17 +138,17 @@ export const editCls = () => {
             >
               （cdsj6 2019/2020 Dashboard）
             </Box>
-          </HeaderPage>
+          </PageTitle>
         </>
       }
     >
-      <HeaderPage size='lg' as='h2' pt={4}>編輯 Dashboard</HeaderPage>
-      <HeaderPage
+      <PageTitle size='lg' as='h2' pt={4}>編輯 Dashboard</PageTitle>
+      <PageTitle
         fontSize={{ base: '17px', md: '25px' }}
         mt={5}
       >
         聖若瑟教區中學第六校
-      </HeaderPage>
+      </PageTitle>
       <Box as='article' px={{ base: 8, sm: 8, md: 16 }} pb={16}>
         <Formik
           initialValues={initialValues}
@@ -242,7 +242,7 @@ export const editSchool = () => {
   return (
     <Page
       title={
-        <HeaderPage size='lg' as='h2' pt={4}>編輯學校</HeaderPage>
+        <PageTitle size='lg' as='h2' pt={4}>編輯學校</PageTitle>
       }
     >
       <Box as='article' px={{ base: 8, sm: 8, md: 16 }} pb={16}>
@@ -336,7 +336,7 @@ export const InfiniteScrolltest = () => {
   return (
     <Page
       title={
-        <HeaderPage size='lg' as='h2' pt={4}>編輯學校</HeaderPage>
+        <PageTitle size='lg' as='h2' pt={4}>編輯學校</PageTitle>
       }
     >
       <Box as='article' px={{ base: 8, sm: 8, md: 16 }} pb={16}>

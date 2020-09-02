@@ -1,22 +1,18 @@
 import React from 'react'
 import {
-  Heading
+  Button
 } from '@chakra-ui/core'
 
-// 白板標題
-const HeaderPage = (props) => {
+const SureButton = (props) => {
   return (
-    <Heading
-      as='div'
-      textAlign='center'
-      size='lg'
-
-      overflow='hidden'
-      textOverflow='ellipsis'
-      whiteSpace='nowrap'
+    <Button
+      variantColor='blue'
+      minW={{ base: '100%', sm: '100%', md: '200px' }}
+      mr={3}
+      mt={8}
       {...props}
     />
   )
 }
 
-export default HeaderPage
+export default SureButton

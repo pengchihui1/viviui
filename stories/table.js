@@ -1,7 +1,7 @@
 import React from 'react'
 
 import Page from '../src/components/page'
-import HeaderPage from '../src/components/page/pageHeader'
+import PageTitle from '../src/components/page/pageTitle'
 import Table from '../src/components/table'
 import TableHead from '../src/components/table/tableHead'
 import TableBody from '../src/components/table/tableBody'
@@ -39,7 +39,7 @@ export const hover = () => {
   ]
   const header = ['序號', '名稱']
   return (
-    <Page nodivider='false' title={<HeaderPage fontSize='28px'>新增用户</HeaderPage>}>
+    <Page nodivider='false' title={<PageTitle fontSize='28px'>新增用户</PageTitle>}>
       <Table type='hover'>
         <TableHead>
           <TableRow>
@@ -157,7 +157,7 @@ export const tables = () => {
   ]
   const header = ['序號', '名稱']
   return (
-    <Page nodivider='false' title={<HeaderPage fontSize='28px'>新增用户</HeaderPage>}>
+    <Page nodivider='false' title={<PageTitle fontSize='28px'>新增用户</PageTitle>}>
       <Table type='table'>
         <TableHead>
           <TableRow>
@@ -222,7 +222,7 @@ export const condensed = () => {
   ]
   const header = ['序號', '名稱']
   return (
-    <Page nodivider='false' title={<HeaderPage fontSize='28px'>新增用户</HeaderPage>}>
+    <Page nodivider='false' title={<PageTitle fontSize='28px'>新增用户</PageTitle>}>
       <Table type='table condensed'>
         <TableHead>
           <TableRow>
@@ -278,7 +278,7 @@ export const line = () => {
   ]
   const header = ['序號', '名稱']
   return (
-    <Page nodivider='false' title={<HeaderPage fontSize='28px'>新增用户</HeaderPage>}>
+    <Page nodivider='false' title={<PageTitle fontSize='28px'>新增用户</PageTitle>}>
       <Table type='line'>
         <TableHead>
           <TableRow>
@@ -335,7 +335,7 @@ export const stripe = () => {
   ]
   const header = ['序號', '名稱']
   return (
-    <Page nodivider='false' title={<HeaderPage fontSize='28px'>新增用户</HeaderPage>}>
+    <Page nodivider='false' title={<PageTitle fontSize='28px'>新增用户</PageTitle>}>
       <Table type='stripe'>
         <TableHead>
           <TableRow>
