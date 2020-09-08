@@ -25,7 +25,7 @@ export const GroupTest = () => {
           {/* </a> */}
         </NextLink>
         {
-          data.map((item, index) => (
+          Children.map(data, (item, index) => (
             <>
               <NextLink href='/test' key={index} passHref>
                 {/* <a onClick={action('button-click')}> */}
@@ -43,13 +43,7 @@ export const GroupTest = () => {
 export const OneGroup = () => {
   return (
     <>
-      <Group>
-        {Children.map(data, (item, index) => (
-          <NextLink href='/Test' passHref>
-            <Card title={item} />
-          </NextLink>
-        ))}
-      </Group>
+      <Card>甲班</Card>
     </>
   )
 }
