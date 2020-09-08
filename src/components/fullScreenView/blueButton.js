@@ -4,7 +4,7 @@ import {
   Box
 } from '@chakra-ui/core'
 
-const BlueButton = ({ leftIcon, rightIcon, children, ...props }) => {
+const BlueButton = React.forwardRef(({ leftIcon, rightIcon, children, ...props }, ref) => {
   return (
     <Button
       as='a'
@@ -12,6 +12,7 @@ const BlueButton = ({ leftIcon, rightIcon, children, ...props }) => {
       w={{ base: '98%', sm: '340px' }}
       variantColor='blue'
       borderRadius='9999px'
+      ref={ref}
       {...props}
     >
       {leftIcon}
@@ -27,6 +28,6 @@ const BlueButton = ({ leftIcon, rightIcon, children, ...props }) => {
       {rightIcon}
     </Button>
   )
-}
+})
 
 export default BlueButton

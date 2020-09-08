@@ -1,13 +1,14 @@
-import React, { useState, useEffect } from 'react'
+import React, { Children } from 'react'
 import { action } from '@storybook/addon-actions'
 import NextLink from 'next/link'
 
 import ButtonGrid from '../src/components/fullScreenView/buttonGrid'
 import { BlueButton, FullScreenView } from '../src/index'
 
-export default { title: 'showLing(hui)' }
+export default { title: 'Batch add(hui)' }
 
-export const SearchTest = () => {
+var arr = [1, 2, 3]
+export const Batch = () => {
   const data = [
     {
       href: '',
@@ -34,19 +35,15 @@ export const SearchTest = () => {
   return (
     <FullScreenView>
       <ButtonGrid>
-        {
-          data.map((item, index) => {
-            return (
-              <>
-                <NextLink href='/test' passHref>
-                  <a onClick={action('button-click')}>
-                    <BlueButton>{item.name}</BlueButton>
-                  </a>
-                </NextLink>
-              </>
-            )
-          })
-        }
+        {data.map((item, index) => {
+          return (
+            <NextLink href='/test' key={index} passHref>
+              {/* <a onClick={action('button-click')}> */}
+              <BlueButton>{item.name}</BlueButton>
+              {/* </a> */}
+            </NextLink>
+          )
+        })}
       </ButtonGrid>
     </FullScreenView>
   )
