@@ -44,10 +44,11 @@ export const ManagementTest = () => {
             data.map((item, index) =>
               <ListItem key={index}>
                 <NextLink
-                  href='/test' passHref
-                  _hover={{
-                    textDecoration: 'none'
-                  }}
+                  href='/test'
+                  passHref
+                // _hover={{
+                //   textDecoration: 'none'
+                // }}
                 >
                   <a onClick={action('button-click')}>
                     <ColumnLine icon={item.icon} color='#316bc3'>{item.name}</ColumnLine>
