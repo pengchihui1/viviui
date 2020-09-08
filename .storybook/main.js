@@ -9,7 +9,7 @@ module.exports = {
     // '../stories/**/school.[tj]s',
     '../stories/**/modalSelector.[tj]s',
     '../stories/**/search.[tj]s',
-    '../stories/**/cardDeck.[tj]s',
+    '../stories/**/cardGroup.[tj]s',
     '../stories/**/management.[tj]s',
     '../stories/**/wbgLayout.[tj]s',
     '../stories/**/adminBatchAdd.[tj]s',
@@ -25,7 +25,8 @@ module.exports = {
     '../stories/**/oldPictureGroup.[tj]s',
     '../stories/**/singleAnnouncement.[tj]s',
     '../stories/**/postCardPicture.[tj]s',
-    '../stories/**/photoMagnify.[tj]s'
+    '../stories/**/photoMagnify.[tj]s',
+
   ],
   addons: [
     '@storybook/addon-knobs/register',

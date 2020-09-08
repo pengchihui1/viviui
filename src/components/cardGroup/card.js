@@ -1,11 +1,10 @@
 import React from 'react'
 import { Box, useColorMode } from '@chakra-ui/core'
 
-// 學校專業的白色小塊 component
-const Card = ({ onClick, title, children, ...props }) => {
+const Card = React.forwardRef(({ onClick, title, children, ...props }, ref) => {
   const { colorMode } = useColorMode()
   return (
-    <Box as='a' onClick={onClick}>
+    <Box as='a' ref={ref}>
       <Box
         as='article'
         w={['45%', '30.5%', '22.5%', '22.6%']}
@@ -31,5 +30,6 @@ const Card = ({ onClick, title, children, ...props }) => {
     </Box>
   )
 }
+)
 
 export default Card
