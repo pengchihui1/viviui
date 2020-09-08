@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { Children } from 'react'
 
 import Page from '../src/components/page'
 import HeaderPage from '../src/components/page/pageHeader'
@@ -51,13 +51,11 @@ export const hover = () => {
         <TableBody>
           {data.map((item, index) => {
             return (
-              <>
-                <TableRow>
-                  <TableCell>{index + 1}</TableCell>
-                  <TableCell>{item.fieldName}</TableCell>
-                  <TableCell>{item.describe}</TableCell>
-                </TableRow>
-              </>
+              <TableRow key={index}>
+                <TableCell>{index + 1}</TableCell>
+                <TableCell>{item.fieldName}</TableCell>
+                <TableCell>{item.describe}</TableCell>
+              </TableRow>
             )
           })}
 
@@ -173,17 +171,15 @@ export const tables = () => {
         <TableBody>
           {data.map((item, index) => {
             return (
-              <>
-                <TableRow>
-                  <TableCell>{index + 1}</TableCell>
-                  <TableCell px={{ base: '1', sm: '1', md: '3' }}>{item.fieldName}</TableCell>
-                  <TableCell px={{ base: '1', sm: '1', md: '3' }}>{item.describe}</TableCell>
-                  <TableCell px={{ base: '1', sm: '1', md: '3' }}>{item.fieldName}</TableCell>
-                  <TableCell px={{ base: '1', sm: '1', md: '3' }}>{item.describe}</TableCell>
-                  <TableCell px={{ base: '1', sm: '1', md: '3' }}>{item.fieldName}</TableCell>
-                  <TableCell px={{ base: '1', sm: '1', md: '3' }}>{item.describe}</TableCell>
-                </TableRow>
-              </>
+              <TableRow key={index}>
+                <TableCell>{index + 1}</TableCell>
+                <TableCell px={{ base: '1', sm: '1', md: '3' }}>{item.fieldName}</TableCell>
+                <TableCell px={{ base: '1', sm: '1', md: '3' }}>{item.describe}</TableCell>
+                <TableCell px={{ base: '1', sm: '1', md: '3' }}>{item.fieldName}</TableCell>
+                <TableCell px={{ base: '1', sm: '1', md: '3' }}>{item.describe}</TableCell>
+                <TableCell px={{ base: '1', sm: '1', md: '3' }}>{item.fieldName}</TableCell>
+                <TableCell px={{ base: '1', sm: '1', md: '3' }}>{item.describe}</TableCell>
+              </TableRow>
             )
           })}
 
@@ -234,13 +230,11 @@ export const condensed = () => {
         <TableBody>
           {data.map((item, index) => {
             return (
-              <>
-                <TableRow>
-                  <TableCell>{index + 1}</TableCell>
-                  <TableCell>{item.fieldName}</TableCell>
-                  <TableCell>{item.describe}</TableCell>
-                </TableRow>
-              </>
+              <TableRow key={index}>
+                <TableCell>{index + 1}</TableCell>
+                <TableCell>{item.fieldName}</TableCell>
+                <TableCell>{item.describe}</TableCell>
+              </TableRow>
             )
           })}
 
@@ -290,13 +284,11 @@ export const line = () => {
         <TableBody>
           {data.map((item, index) => {
             return (
-              <>
-                <TableRow>
-                  <TableCell>{index + 1}</TableCell>
-                  <TableCell>{item.fieldName}</TableCell>
-                  <TableCell>{item.describe}</TableCell>
-                </TableRow>
-              </>
+              <TableRow key={index}>
+                <TableCell>{index + 1}</TableCell>
+                <TableCell>{item.fieldName}</TableCell>
+                <TableCell>{item.describe}</TableCell>
+              </TableRow>
             )
           })}
 
@@ -347,13 +339,11 @@ export const stripe = () => {
         <TableBody>
           {data.map((item, index) => {
             return (
-              <>
-                <TableRow>
-                  <TableCell>{index + 1}</TableCell>
-                  <TableCell>{item.fieldName}</TableCell>
-                  <TableCell>{item.describe}</TableCell>
-                </TableRow>
-              </>
+              <TableRow key={index}>
+                <TableCell>{index + 1}</TableCell>
+                <TableCell>{item.fieldName}</TableCell>
+                <TableCell>{item.describe}</TableCell>
+              </TableRow>
             )
           })}
 
